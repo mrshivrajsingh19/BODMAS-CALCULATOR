@@ -26,6 +26,50 @@ A.innerText=A.innerText+AAA[l]
 }
 })
 
+let y=[
+"0" ,
+"1" ,
+"2" ,
+"3" ,
+"4" ,
+"5" ,
+"6" ,
+"7" ,
+"8" ,
+"9" ,
+"+" ,
+"-" ,
+"*" ,
+"/" ,
+"." ,
+]
+
+document.addEventListener(
+"keydown",
+(e)=>{
+    for(let i=0;i<15;i++)
+    {
+if(e.key==y[i] )
+{
+A.innerText=A.innerText+e.key
+}
+    }
+
+if(e.key=="Enter")
+{
+equal.onclick()
+}
+if(e.key=="Backspace")
+{
+x.onclick()
+}
+
+}
+)
+
+
+
+
 
 equal.onclick=()=>{
 // A.innerText=""
