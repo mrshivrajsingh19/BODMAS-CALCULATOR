@@ -5,27 +5,6 @@ let equal=document.querySelector(".c")
 let x=document.querySelector(".x")
 let AAA=A.innerText.split("")
 
-
-B.forEach(all=>{
-all.onclick=()=>{
-   let z= A.innerText
-A.innerText=z+all.innerText
-AAA=A.innerText.split("")
-
-if(AAA.length>14)
-{
-    A.innerText=""
-for(let l=0;l<14;l++)
-{
-A.innerText=A.innerText+AAA[l]
-}
-}
-
-
-
-}
-})
-
 let y=[
 "0" ,
 "1" ,
@@ -64,8 +43,153 @@ if(e.key=="Backspace")
 x.onclick()
 }
 
+
+AAA=A.innerText.split("")
+if(AAA.length>14)
+{
+    A.innerText=""
+for(let l=0;l<14;l++)
+{
+A.innerText=A.innerText+AAA[l]
+}
+}
+
+for(let i=0;i<AAA.length;i++)
+{
+    if(AAA[i]=="+"  && AAA[i+1]=="+" ||
+AAA[i]=="+"  && AAA[i+1]=="-" ||
+AAA[i]=="+"  && AAA[i+1]=="*" ||
+AAA[i]=="+"  && AAA[i+1]=="/" ||
+
+AAA[i]=="-"  && AAA[i+1]=="-" ||
+AAA[i]=="-"  && AAA[i+1]=="+" ||
+AAA[i]=="-"  && AAA[i+1]=="/" ||
+AAA[i]=="-"  && AAA[i+1]=="*" ||
+
+AAA[i]=="*"  && AAA[i+1]=="*" ||
+AAA[i]=="*"  && AAA[i+1]=="/" ||
+AAA[i]=="*"  && AAA[i+1]=="-" ||
+AAA[i]=="*"  && AAA[i+1]=="+" ||
+
+AAA[i]=="/"  && AAA[i+1]=="*" ||
+AAA[i]=="/"  && AAA[i+1]=="/" ||
+AAA[i]=="/"  && AAA[i+1]=="-" ||
+AAA[i]=="/"  && AAA[i+1]=="+" 
+    )
+{
+     A.innerText=""
+for(let l=0;l<i+1;l++)
+{
+A.innerText=A.innerText+AAA[l]
+}
+
+}
+
+}
+
 }
 )
+
+
+B.forEach(all=>{
+all.onclick=()=>{
+   let z= A.innerText
+A.innerText=z+all.innerText
+AAA=A.innerText.split("")
+
+if(AAA.length>14)
+{
+    A.innerText=""
+for(let l=0;l<14;l++)
+{
+A.innerText=A.innerText+AAA[l]
+}
+}
+
+
+for(let i=0;i<AAA.length;i++)
+{
+    if(AAA[i]=="+"  && AAA[i+1]=="+" ||
+AAA[i]=="+"  && AAA[i+1]=="-" ||
+AAA[i]=="+"  && AAA[i+1]=="*" ||
+AAA[i]=="+"  && AAA[i+1]=="/" ||
+
+AAA[i]=="-"  && AAA[i+1]=="-" ||
+AAA[i]=="-"  && AAA[i+1]=="+" ||
+AAA[i]=="-"  && AAA[i+1]=="/" ||
+AAA[i]=="-"  && AAA[i+1]=="*" ||
+
+AAA[i]=="*"  && AAA[i+1]=="*" ||
+AAA[i]=="*"  && AAA[i+1]=="/" ||
+AAA[i]=="*"  && AAA[i+1]=="-" ||
+AAA[i]=="*"  && AAA[i+1]=="+" ||
+
+AAA[i]=="/"  && AAA[i+1]=="*" ||
+AAA[i]=="/"  && AAA[i+1]=="/" ||
+AAA[i]=="/"  && AAA[i+1]=="-" ||
+AAA[i]=="/"  && AAA[i+1]=="+" 
+    )
+{
+     A.innerText=""
+for(let l=0;l<i+1;l++)
+{
+A.innerText=A.innerText+AAA[l]
+}
+
+}
+
+}
+
+
+
+
+}
+})
+
+
+
+
+
+// let y=[
+// "0" ,
+// "1" ,
+// "2" ,
+// "3" ,
+// "4" ,
+// "5" ,
+// "6" ,
+// "7" ,
+// "8" ,
+// "9" ,
+// "+" ,
+// "-" ,
+// "*" ,
+// "/" ,
+// "." ,
+// ]
+
+// document.addEventListener(
+// "keydown",
+// (e)=>{
+//     for(let i=0;i<15;i++)
+//     {
+// if(e.key==y[i] )
+// {
+// A.innerText=A.innerText+e.key
+// }
+//     }
+
+// if(e.key=="Enter")
+// {
+// equal.onclick()
+// }
+// if(e.key=="Backspace")
+// {
+// x.onclick()
+// }
+
+// }
+// )
 
 
 
@@ -193,7 +317,7 @@ console.log(AAAA)
 
 
 
-
+            
 
 
 
@@ -204,14 +328,28 @@ let AAAAA=A.innerText.split("")
 
 
 console.log(AAAAA.length)
-if(AAAAA.length>14)
+
+let nu=AAAAA.length
+if(nu>14)
 {
+nu=14
+}
+
     A.innerText=""
-for(let i=0;i<12;i++)
+for(let l=0;l<nu;l++)
 {
-A.innerText=A.innerText+AAAAA[i]
+A.innerText=A.innerText+AAAAA[l]
 }
-A.innerText=A.innerText+"++"
-}
+
+
+// if(AAAAA.length>14)
+// {
+//     A.innerText=""
+// for(let i=0;i<12;i++)
+// {
+// A.innerText=A.innerText+AAAAA[i]
+// }
+// A.innerText=A.innerText+"++"
+// }
 
 }
