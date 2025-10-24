@@ -1,4 +1,4 @@
-vlet A=document.querySelector(".result")
+let A=document.querySelector(".result")
 let B=document.querySelectorAll(".numbers")
 let C=document.querySelector(".rub")
 let equal=document.querySelector(".c")
@@ -311,7 +311,7 @@ console.log(AAAA)
 }
 // AAA[0]=AAA[0]+AAA[2]
 
-let BB=A.split("")
+let BB=A.innerText.split("")
 let cd=0;
 
 for(let i=0;i<BB.length;i++)
