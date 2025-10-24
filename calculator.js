@@ -1,4 +1,4 @@
-let A=document.querySelector(".result")
+vlet A=document.querySelector(".result")
 let B=document.querySelectorAll(".numbers")
 let C=document.querySelector(".rub")
 let equal=document.querySelector(".c")
@@ -195,9 +195,6 @@ A.innerText=A.innerText+AAA[l]
 
 
 
-equal.onclick=()=>{
-// A.innerText=""
-}
 x.onclick=()=>{
 let AA=A.innerText.split("")  
 A.innerText=""
@@ -314,12 +311,21 @@ console.log(AAAA)
 }
 // AAA[0]=AAA[0]+AAA[2]
 
+let BB=A.split("")
+let cd=0;
 
+for(let i=0;i<BB.length;i++)
+    {
+if(BB[i]=="/" || BB[i]=="*" || BB[i]=="-" || BB[i]=="+")
+{
+cd=1
+}
+    }        
 
-
-            
-
-
+    if(cd==0)
+{
+AAAA[0]=A.innerText
+}
 
 
 A.innerText=AAAA[0]
